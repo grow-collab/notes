@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.js"></script>
+</head>
+<body>
+<script>
+    /*
+        <!--  通过原生js 发起ajax请求的代码  -->
+        //    1.创建一个请求对象 XMLHttpRequest
+        let request = new XMLHttpRequest()
+
+        request.open('GET', 'http://150.158.21.251:4000/search?keywords=%E6%B5%B7%E9%98%94%E5%A4%A9%E7%A9%BA')
+        // 设置请求头
+        // request.setRequestHeader('token', 'xxxxxxx')
+
+        // 发送请求
+        request.send({})
+
+        // 回调函数的方式 onreadystatechange
+        request.onreadystatechange = function () {
+            //判断一下当前的请求状态
+            if (request.readyState == 4 && request.status == 200) {
+                // 响应成功
+                console.log(request.responseText)
+            }
+        }
+    */
+
+    // 通过jquery 的 ajax的方式
+    // $.ajax({
+    //     url: 'http://150.158.21.251:4000/search?keywords=%E6%B5%B7%E9%98%94%E5%A4%A9%E7%A9%BA', #请求地址
+    //     method: 'GET', #请求方法
+    //     success: function (res) { #请求成功的回调函数
+    //         console.log(res)
+    //     }
+    //     fail:success(){},
+    // })
+
+    //跨域
+    // 1. jsonp  # 需要后端配合 test({'key':'value'})  ==> 1.js?callback=test  回调函数里面 test(data){}
+    // 利用script 的src 请求的资源是不存在跨域问题的
+    // 2. 后端设置cors
+    // 3. 代理服务器 (后端设置一个代理服务器) 跨域 前端存在的问题
+
+
+</script>
+</body>
+</html>

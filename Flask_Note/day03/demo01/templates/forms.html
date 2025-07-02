@@ -1,0 +1,10 @@
+{#存放宏,实现复用#}
+{#输入框#}
+{% macro input(name,value='我是默认值',type='text') %}
+    <input name="{{ name }}" value="{{ value }}" type="{{ type }}">
+{% endmacro %}
+
+{#文本域#}
+{% macro textarea(name,rows=10,cols=30,value='') %}
+    <textarea name="{{ name }}" cols="{{ cols }}" rows="{{ rows }}">{{ value }}</textarea>
+{% endmacro %}

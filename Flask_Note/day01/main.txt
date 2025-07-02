@@ -1,0 +1,9 @@
+flask web框架( 后端 ) ==> 快速搭建我们的网站 ===> 模板引擎jinja2
+
+
+# git ==> 串讲课
+
+# web开发 主流方式 前后端分离的开发模式
+# 前后分离
+# 前端 : vue全家桶 ==> web框架( 前端 )
+# 后端 : spring,flask,Django,nodejs( )

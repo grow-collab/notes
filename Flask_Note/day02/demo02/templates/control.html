@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        td {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+<h1>control.html</h1>
+
+{# 1. if 语句 #}
+{% if obj.sick %}
+    <h2>罗翔生病了</h2>
+{% elif obj.headache %}
+    <h2>罗翔头痛</h2>
+{% else %}
+    <h2>罗翔一切安好</h2>
+{% endif %}
+
+{# 2.for循环 #}
+<ul>
+    {#  普通的遍历  #}
+    {% for user in users %}
+        <li>{{ user.username }}--{{ user.age }}</li>
+    {% else %}
+        <li>暂无数据</li>
+    {% endfor %}
+</ul>
+
+<ul>
+    {#  遍历字典  #}
+    {% for key,value in dic.items() %}
+        <li>{{ key }}--{{ value }}</li>
+    {% endfor %}
+</ul>
+
+{# 循环迭代变量loop #}
+{#
+    loop.index 索引从1开始
+    loop.index0 索引从0开始
+    loop.first 第一次循环迭代遍历
+    loop.last  最后一次循环迭代遍历
+    loop.length 迭代的数组的长度
+#}
+<table>
+    <thead>
+    <tr>
+        <td>序号</td>
+        <td>书名</td>
+        <td>作者</td>
+        <td>价格</td>
+        <td>总数</td>
+    </tr>
+    </thead>
+    <tbody>
+    {% for book in books %}
+        {% if loop.first %}
+            <tr style="background:pink">
+                {% elif loop.last %}
+            <tr style="background:blue">
+                {% else %}
+            <tr>
+        {% endif %}
+    <td>{{ loop.index }}</td>
+    <td>{{ book.name }}</td>
+    <td>{{ book.author }}</td>
+    <td>{{ book.price }}</td>
+    <td>{{ loop.length }}</td>
+    </tr>
+    {% endfor %}
+
+    </tbody>
+</table>
+
+
+</body>
+</html>
+
+{# 模板继承 宏 复用... #}

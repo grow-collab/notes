@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+</head>
+<body>
+{# 宏 ==> 框架 ==> 操作 ,macro #}
+{# {{  }} ==>插值语法 #}
+{#{% macro input(name,value='我是默认值',type='text') %}#}
+{#    <input name="{{ name }}" value="{{ value }}" type="{{ type }}">#}
+{#{% endmacro %}#}
+
+{#导入宏#}
+{#{% import "forms.html" as forms %}#}
+{##}
+{#<div>输入框: {{ forms.input('username') }}</div>#}
+{#<div>密码框: {{ forms.input('password',value='',type='password') }}</div>#}
+{#<div>文本域: {{ forms.textarea('comment',value='哈哈哈哈') }}</div>#}
+
+{#导入宏#}
+{#{% from "forms.html" import input as input_field,textarea as textarea_field %}#}
+{#<div>输入框: {{ input_field('username') }}</div>#}
+{#<div>密码框: {{ input_field('password',value='',type='password') }}</div>#}
+{#<div>文本域: {{ textarea_field('comment') }}</div>#}
+
+
+</body>
+</html>
