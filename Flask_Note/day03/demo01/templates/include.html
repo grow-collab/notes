@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>include</title>
+</head>
+<body>
+{# 包含 ==> 把一段代码复制到另外的一个模板的指定位置 #}
+{% include "content.html" %}
+<hr>
+<div>哈哈哈</div>
+
+
+<div>渲染name变量: {{ name }}</div>
+{# set语句 ==>赋值语句  =   let const var ==> 变量提升  var name=10 ==> 先声明在赋值 ==> 闭包   #}
+{% set name='flask' %}
+<hr>
+<div>渲染name变量: {{ name }}</div>
+
+
+<hr>
+<div>年龄: {{ age }}</div>
+{#作用域块#}
+{% with %}
+    {% set age=99 %}
+    <div>年龄: {{ age }}</div>
+{% endwith %}
+<div>年龄: {{ age }}</div>
+
+</body>
+</html>

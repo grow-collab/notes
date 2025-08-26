@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index.html</title>
+</head>
+<body>
+<h1>我是首页</h1>
+{# vue react django #}
+{#
+{{ 用来存放我们的变量,渲染变量 }}
+{% 用来执行函数或者是逻辑代码 %}
+#}
+<div>
+    {{ name }}
+</div>
+<div>{{ hobby }}</div>
+<ul>
+    {% for item  in hobby %}
+        <li>{{ item }}</li>
+    {% endfor %}
+</ul>
+</body>
+</html>
+
+{# html+css+js(交互效果) (数据请求) ==>  静态页面 #}

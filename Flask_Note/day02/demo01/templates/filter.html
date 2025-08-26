@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center><h1>filter.html过滤器</h1></center>
+<div>
+    <p>1.绝对值过滤器</p>
+    <p>{{ position | abs }}</p>
+    <hr>
+</div>
+
+<div>
+    <p>2.默认值过滤器</p>
+    <p>{{ signature | default('此人很懒,没有留下任何说明!',boolean=True) }}</p>
+    <p>{{ signature or '此人很懒,没有留下任何说明!' }}</p>
+    <hr>
+</div>
+
+<div>
+    {#  在flask里面处于安全性的考虑,默认开启了全局转义  #}
+    <p>3.转义字符过滤器</p>
+    <p>{{ html | safe }}</p>
+    <p>
+        {% autoescape off %}
+        {{ html }}
+        {% endautoescape %}
+    </p>
+    <hr>
+</div>
+
+<div>
+    <p>4.数组相关过滤器</p>
+    <p>返回第一个元素 {{ fruits | first }}</p>
+    <p>返回最后一个元素 {{ fruits | last }}</p>
+    <p>返回数组长度 {{ fruits | length }}</p>
+    <p>{{ fruits|join('-') }}</p>
+    <hr>
+</div>
+
+<div>
+    <p>5.格式化字符串</p>
+    <p>{{ "%s - %s" | format("hello","world") }}</p>
+    <hr>
+</div>
+
+<div>
+    <p>6.类型转换</p>
+    <p>{{ number | string }}</p>
+    <p>{{ number | int }}</p>
+    <p>{{ number | float }}</p>
+    <hr>
+</div>
+
+<div>
+    {#   验证码 6JY3 ==> 6JY3 6jY3  6Jy3 6jy3  #}
+    <p>7.大小写转换</p>
+    <p>{{ word | lower }}</p>
+    <p>{{ word | upper }}</p>
+    <p>{{ word | replace('World','Apple') }}</p>
+    <hr>
+</div>
+
+<div>
+    <p>8.其他的一些</p>
+    <p>省略号过滤器 {{ word | truncate(length=5) }}</p>
+    <p>去除两端空格 {{ case | trim }}</p>
+    <p>删除字符串中所有的html标签 {{ html | striptags }}</p>
+    <p>统计一个单词个数 {{ case | wordcount }}</p>
+    <hr>
+</div>
+
+
+{# 自定义过滤器 #}
+<div>
+    {#   验证码 6JY3 ==> 6JY3 6jY3  6Jy3 6jy3  #}
+    <p>9.自定义过滤器</p>
+    <p>价格: {{ price | priceformat }}</p>
+    <p>时间格式过滤 {{ create_time | handle_time }}</p>
+    <hr>
+</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://lib.baomitu.com/jquery/latest/jquery.js"></script>
+</head>
+<body>
+<div>
+    <div>姓名: <input type="text" class="user"></div>
+    <div>密码: <input type="text" class="password"></div>
+    <button class="btn">登录</button>
+</div>
+<script>
+    $(function () {
+        $('.btn').on('click', function () {
+            {# 前端校验 #}
+            var name = $('.user').val();
+            var password = $('.password').val();
+            if (!name && !password) {
+                return alert('该字段不可以为空')
+            }
+            {#  发起请求  #}
+            $.ajax({
+                url: '/index/',
+                method: 'POST',
+                data: {
+                    'name': name,
+                    'password': password
+                },
+                {#  获取请求成功的回调函数  #}
+                success(res) {
+                    console.log(res)
+                }
+            })
+        });
+    })
+</script>
+</body>
+</html>

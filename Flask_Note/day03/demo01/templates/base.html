@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    {# 坑的名称 #}
+    <title>{% block title %}{% endblock %} </title>
+    {% block a %}{% endblock %}
+</head>
+<body>
+<div id="body">{% block b %}{% endblock %}</div>
+
+<div id="footer">{% block c %} 我是base的脚注 {% endblock %}</div>
+</body>
+</html>

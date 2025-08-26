@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{#填坑#}
+{% block title %}我是字模板的标题{% endblock %}
+
+{% block a %}
+    <style>
+        #body {
+            color: red
+        }
+    </style>
+{% endblock %}
+
+{% block b %}
+    <div>哈哈哈哈,body页面主体内容</div>
+{% endblock %}
+
+{% block c %}
+    {{ super() }}
+    <h1>我是字模板脚注</h1>
+{% endblock %}
