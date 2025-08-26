@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>{{ name }}</p>
+    <p>{{ age  }}</p>
+    <div>
+        <p>四大名著:</p>
+        <p>{{ books.0 }}</p>
+        <p>{{ books.1 }}</p>
+        <p>{{ books.2 }}</p>
+        <p>{{ books.3 }}</p>
+    </div>
+    <div>
+        <p>详细信息:</p>
+        <p>西游记:{{ info.西游记 }}</p>
+        <p>水浒传:{{ info['水浒传'] }}</p>
+    </div>
+    <ul>
+        <li>四大名著2:</li>
+        <li>循环语句</li>
+        {% for book in books %}
+        <li>{{ book }}</li>
+        {% endfor %}
+    </ul>
+    <ul>
+        <li>测试(循环+条件语句):</li>
+        {% for tt in test %}
+            {% if tt % 2 == 0%}
+                <li>{{ tt }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</body>
+</html>

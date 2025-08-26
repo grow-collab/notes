@@ -1,0 +1,13 @@
+# FastAPI 是一个用于构建 API 的现代、快速（高性能）的 web 框架，使用 Python 并基于标准的 Python 类型提示。
+# 快速:可与 NodeJS 和 Go 并肩的极高性能（归功于 Starlette 和 Pydantic）。最快的 Python web 框架之一。
+
+安装依赖库:
+pip install fastapi
+pip install "uvicorn[standard]"
+
+启动:
+借助Uvicorn运行fastapi项目,命令:uvicorn main:app --reload
+
+fastapi提供了接口测试文档,http://127.0.0.1:8000/docs
+
+# 官网地址:https://fastapi.tiangolo.com/zh/

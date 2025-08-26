@@ -1,0 +1,4 @@
+# 借助Uvicorn运行fastapi项目,命令:uvicorn main:app --reload
+
+# redis数据库启动命令(端口默认6379,可指定):redis-server --port 6380
+# 连接redis数据库,redis-cli

@@ -1,0 +1,23 @@
+# aerich是一个ORM迁移工具,需要结合tortoise异步orm框架使用。安装 aerich
+# pip install aerich
+
+# 1.初始化配置,只需要使用一次
+# aerich init -t settings.TORTOISE_ORM
+# 初始化完成会生成两个文件,pyproject.toml和一个文件夹:migrations
+# pyproject.toml:保存配置文件路径,低版本可能是aerich.ini
+# migrations:存放迁移文件
+
+# 2.初始化数据库,一般情况下只用一次
+# aerich init-db
+
+# 3.更新模型,并进行迁移
+# aerich migrate
+
+# 4.重新执行迁移,写入数据库
+# aerich upgrade
+
+# 5.回到上一个版本
+# aerich downgrade
+
+# 6.查看历史迁移记录
+# aerich history

@@ -1,0 +1,25 @@
+# REST的含义就是客户端和Web服务器之间进行交互的时候,使用HTTP协议中的四种请求方法代表不同的动作
+
+# GET,用来获取资源
+# POST,用来新建资源
+# PUT,用来更新资源
+# DELETE,用来删除资源
+
+
+Student资源接口开发,采用restful规范
+
+get
+/students   查看所有的学生
+
+post
+/students   添加学生
+
+get
+/students/1     查看id为1的学生
+
+put
+/students/1     更新id为1的学生
+
+delete
+/students/1     删除id为1的学生
+
