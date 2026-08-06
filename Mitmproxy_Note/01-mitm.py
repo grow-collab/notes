@@ -30,4 +30,7 @@ def response(flow: http.HTTPFlow):
 
 # 启动(-p:代表端口 -s:运行的脚本)
 # mitmdump -q -p 8888 -s 01-mitm.py
+
+# 安装证书,在第一次启动之后才会生成证书
 # 默认在系统目录的指定位置生成证书 .mitmproxy文件中(C:\Users\24830\.mitmproxy)
+# 在'.mitmproxy'文件夹下面有多个文件，选择'mitmproxy-ca-cert.cer'这个安装即可
